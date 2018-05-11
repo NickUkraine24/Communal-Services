@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+// import { NgModule } from '@angular/core';
+
+import {COMSERVICES} from '../mock-service';
 
 @Component({
   selector: 'app-comservice',
@@ -7,11 +10,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ComserviceComponent implements OnInit {
 
-  @Input() service;
+  // calculate(){
+  //   console.log('Calculate');
+  // }
+
+  comservices = COMSERVICES;
+
+  new_metric = '';
+  // date_local = '';
 
   constructor() { }
 
   ngOnInit() {
+
+    
   }
 
 }

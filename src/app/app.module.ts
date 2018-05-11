@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 import { ComserviceComponent } from './comservice/comservice.component';
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ const routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
