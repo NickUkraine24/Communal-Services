@@ -1,0 +1,20 @@
+.jumbotron{
+    padding-bottom: 40px;
+    padding-top: 30px;
+    background: #252526;
+    color: #eee;
+}
+#head_text{
+    text-align: center;
+}
+.head_btn{
+    text-align: center;
+    margin-top: 40px; 
+}
+#btn_1, #btn_2{
+    margin-right: 15px;
+}
+.card{
+    margin-left:30px; 
+    width: 30%;
+}

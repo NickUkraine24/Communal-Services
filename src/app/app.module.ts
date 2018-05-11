@@ -1,16 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule} from '@angular/router';
 
-
+import { ComserviceComponent } from './comservice/comservice.component';
 import { AppComponent } from './app.component';
+import { PaymentsComponent } from './payments/payments.component';
+import { SettingsComponent } from './settings/settings.component';
 
+const routes = [
+  {path: '', component: SettingsComponent},
+  {path: 'comservice', component: ComserviceComponent},
+  {path: 'payments', component: PaymentsComponent}
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PaymentsComponent,
+    SettingsComponent,
+    ComserviceComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
