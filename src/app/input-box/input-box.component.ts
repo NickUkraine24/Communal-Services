@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 
-import {COMSERVICES} from '../mock-service';
+// import {COMSERVICES} from '../mock-service';
 import {ComserviceComponent} from '../comservice/comservice.component';
+import {AppService} from '../app.service';
 
 @Component({
   selector: 'app-input-box',
@@ -11,15 +12,19 @@ import {ComserviceComponent} from '../comservice/comservice.component';
 export class InputBoxComponent implements OnInit {
   
   @Input() service: Object;
-  @Input() newTariff: number;
 
   calculating = 0.00;
-  new_tariff = 0;
-  new_metric = 0;
-  new_date = '';
-  
+  new_tariff: number;
+  new_metric: number;
+
+  // new_date = '';
+  // calculating = 0.00;
+  // new_tariff;
+  // new_metric;
+
   calculate(){
     this.calculating = this.new_metric * this.new_tariff;
+    return this.calculating;
   }
 
   constructor() { }
