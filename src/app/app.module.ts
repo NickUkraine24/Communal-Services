@@ -7,6 +7,8 @@ import { ComserviceComponent } from './comservice/comservice.component';
 import { AppComponent } from './app.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { SettingsComponent } from './settings/settings.component';
+import { ControlPayComponent } from './control-pay/control-pay.component';
+import { InputBoxComponent } from './input-box/input-box.component';
 
 const routes = [
   {path: '', component: SettingsComponent},
@@ -19,7 +21,9 @@ const routes = [
     AppComponent,
     PaymentsComponent,
     SettingsComponent,
-    ComserviceComponent
+    ComserviceComponent,
+    ControlPayComponent,
+    InputBoxComponent
   ],
   imports: [
     BrowserModule,

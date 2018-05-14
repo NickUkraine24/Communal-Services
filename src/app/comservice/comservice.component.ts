@@ -6,20 +6,17 @@ import {COMSERVICES} from '../mock-service';
 @Component({
   selector: 'app-comservice',
   templateUrl: './comservice.component.html',
-  styleUrls: ['./comservice.component.css']
+  styleUrls: ['./comservice.component.css'],
 })
 export class ComserviceComponent implements OnInit {
 
-  // calculate(){
-  //   console.log('Calculate');
-  // }
+  // name_services: string = 'Electricity';
+  // newTariff: number = 1231;
 
   comservices = COMSERVICES;
 
-  new_metric = '';
-  // date_local = '';
-
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
 

@@ -1,4 +1,14 @@
 .card{
-    width: 25%;
-    margin-left: 20%;
+    min-width: 230px;
+    margin: 0 10px 10px;
+}
+.comservice{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.controlPay{
+    display: flex;
+    flex-flow: row-reverse;
 }

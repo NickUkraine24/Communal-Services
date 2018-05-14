@@ -1,0 +1,14 @@
+<div class="card-body">
+    <h3>{{service.name_service}}</h3>
+    <input type="number" class="form-control" placeholder="Input your metric" [(ngModel)] = 'new_metric'>
+    <!-- <p>{{new_metric}}</p> -->
+    <input type="number" class="form-control" placeholder="{{service.tariff}}" [(ngModel)] = 'new_tariff'>
+    <div class="custom-control custom-checkbox result_box">
+      <input type="checkbox" class="custom-control-input check_proplata" id="check_proplata" (click)='check_proplata()'>
+      <label class="custom-control-label" for="check_proplata_1">Paid for this service</label>
+    </div>
+    <input type="date" value="2018-06-01" [(ngModel)]='new_date'>
+    <p>{{new_date}}</p>
+    <button type="button" class="btn btn-primary" (click)='calculate()'>Calculate</button>
+    <p>{{calculating}} UAH</p>
+</div>

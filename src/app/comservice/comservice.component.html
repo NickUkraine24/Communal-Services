@@ -1,15 +1,8 @@
-<div class="card" *ngFor='let service of comservices'>
-  <div class="card-body">
-    <h3>{{service.name_service}}</h3>
-    <input type="number" class="form-control" placeholder="{{service.metric}}" [(ngModel)] = 'new_metric'>
-    <p>{{new_metric}}</p>
-    <input type="number" class="form-control" placeholder="{{service.tariff}}">
-    <div class="custom-control custom-checkbox result_box">
-      <input type="checkbox" class="custom-control-input check_proplata" id="check_proplata_1">
-      <label class="custom-control-label" for="check_proplata_1">Paid for this service</label>
-    </div>
-    <input type="date" value="2018-06-01">
-    <a href="#" class="btn btn-primary">Calculate</a>
-    <p>00.00 UAH</p>
+<app-control-pay></app-control-pay>
+<div class="comservice">
+  <div class="card" *ngFor='let service of comservices'>
+
+    <app-input-box [service]='service'></app-input-box>
+    
   </div>
 </div>
