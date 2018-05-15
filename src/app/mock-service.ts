@@ -6,9 +6,9 @@
 //     {name_service: 'Water supply', year: 2016, month: 6, sum: 25, metric: 1745, tariff: 1.75, paid: true},
 //     {name_service: 'Drainage', year: 2016, month: 6, sum: 25, metric: 1546, tariff: 0.75, paid: true},
 // ]
-import {data_service} from './data_service';
+import {data_types} from './data_types';
 
-export const payment: data_service[] = [
+export const payment: data_types[] = [
 {
     id: 1, year: 2018, month: 'January',  
     fixedService: [

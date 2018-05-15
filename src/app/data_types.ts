@@ -7,19 +7,19 @@
 //     tariff: number;
 //     paid: boolean;
 // }
-export class data_service{
+export class data_types{
     id:number;
     year: number;
-    month: number;
-    fixedService: FixedService[];
-    varService: VarService[];
+    month: string;
+    fixedService: fixed_service[];
+    varService: var_service[];
 }
-class FixedService{
+class fixed_service{
     id: number;
     name: string;
     sum: number;
 }
-class VarService{
+class var_service{
     id: number;
     name: string;
     previous: number;

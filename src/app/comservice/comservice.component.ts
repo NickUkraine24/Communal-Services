@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 // import { NgModule } from '@angular/core';
 
-import {COMSERVICES} from '../mock-service';
+// import {COMSERVICES} from '../mock-service';
 
 @Component({
   selector: 'app-comservice',
@@ -13,7 +13,7 @@ export class ComserviceComponent implements OnInit {
   // name_services: string = 'Electricity';
   // newTariff: number = 1231;
 
-  comservices = COMSERVICES;
+  // comservices = COMSERVICES;
 
   constructor() {
    }
