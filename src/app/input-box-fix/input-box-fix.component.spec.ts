@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ControlPayComponent } from './control-pay.component';
+import { InputBoxFixComponent } from './input-box-fix.component';
 
-describe('ControlPayComponent', () => {
-  let component: ControlPayComponent;
-  let fixture: ComponentFixture<ControlPayComponent>;
+describe('InputBoxFixComponent', () => {
+  let component: InputBoxFixComponent;
+  let fixture: ComponentFixture<InputBoxFixComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ControlPayComponent ]
+      declarations: [ InputBoxFixComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ControlPayComponent);
+    fixture = TestBed.createComponent(InputBoxFixComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

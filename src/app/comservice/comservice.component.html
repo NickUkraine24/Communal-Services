@@ -1,8 +1,29 @@
-<app-control-pay></app-control-pay>
-<div class="comservice">
-  <div class="card" *ngFor='let service of comservices'>
+<div class="card">
+    <p>Total: {{sum}} UAH</p>
+    <button type="button" class="btn btn-outline-warning" (click)='openModal(template)'>Save</button>
+</div>
 
-    <app-input-box [service]='service'></app-input-box>
-    
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Saving data</h4>
   </div>
+  <div class="modal-body">
+    <div>
+      <span>After to click "OK", your data will save.</span>
+    </div>
+    <div id='div_alert'>
+      <button type="button" class="btn_save_alert btn btn-success" (click)='save()' (click)="modalRef.hide()" (click)='alert_mess(alert)'>OK</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #alert>
+    <strong>Well done!</strong>You successfully add your data.
+</ng-template>
+
+<app-input-date (changeMonth)='changeMonth($event)'></app-input-date>
+
+<div class="comservice">
+    <app-input-box-fix *ngFor='let service of lastPayment?.fixedService' [FixService] = 'service' (messageEvent)='receiveMessage($event)'></app-input-box-fix>
+    <app-input-box *ngFor='let service of lastPayment?.varService' [VarService] = 'service' (messageEvent)='receiveMessage($event)'></app-input-box>
 </div>

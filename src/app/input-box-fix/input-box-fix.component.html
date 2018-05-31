@@ -1,0 +1,9 @@
+<div class="card">
+ <div class="card-body">
+    <h3>{{FixService.name | uppercase}}</h3>
+    <hr>
+    <input type="number" class="form-control" placeholder="Input your metric {{FixService.tariff}}" [(ngModel)] = 'new_tariff'>
+    <button type="button" class="btn btn-outline-warning" (click)='calculate()'>Calculate</button>
+    <p>{{calculating}} UAH</p>
+  </div>
+</div>

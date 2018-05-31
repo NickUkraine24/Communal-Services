@@ -1,21 +1,17 @@
 <div class="jumbotron">
   <h1 id="head_text">Communal Services</h1> 
   <div class='head_btn'>     
-    <a routerLink='comservice'>
-      <button id="btn_1" type="button" class="btn btn-primary btn-lg">Input data</button>
-    </a>
-    <a routerLink='/payments'>
-      <button id="btn_2" type="button" class="btn btn-primary btn-lg">History payments</button>
-    </a>
     <a routerLink='/'>
-      <button id="btn_3" type="button" class="btn btn-primary btn-lg">Settings</button>
+      <button id="btn_1" type="button" class="btn btn-outline-light btn-lg">Input data</button>
+    </a>
+    <a routerLink='/history'>
+      <button id="btn_2" type="button" class="btn btn-outline-light btn-lg">History payments</button>
+    </a>
+    <a routerLink='/settings'>
+      <button id="btn_3" type="button" class="btn btn-outline-light btn-lg">Settings</button>
     </a>
   </div>
 </div>  
 <div class="container">
-
 <router-outlet></router-outlet>
-
-
-<!-- <app-comservice></app-comservice> -->
 </div>

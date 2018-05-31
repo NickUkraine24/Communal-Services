@@ -1,0 +1,17 @@
+.card{
+    display: flex;
+    background-color: #2a2a2b;
+    max-width: 252px;
+    min-width: 252px;
+}
+p{
+    color: #eeeeee;
+    font-size: 1.7em;
+    float: left;
+}
+select{
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: right;
+}

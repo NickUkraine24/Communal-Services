@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-body">
+      <p>{{year}}</p>
+      <select [(ngModel)]="inputMonth" (change)="monthListener()">
+        <option value="{{month-1}}">{{month-1 | month}}</option>
+        <option value="{{month}}">{{month | month}}</option>
+      </select>
+    </div>
+</div>

@@ -1,7 +1,47 @@
-<div class="card">
-  <label class="active" for="size_services">The number of servises</label>
-  <input id="size_services" type="text" class="validate">
-  <div class="card-body">
-      <button class="btn waves-effect waves-light" (click) = 'onChange()'>To change</button>
+<button type="button" class="btn btn-outline-warning btn-lg" (click)='alert(template)'>Add new service</button>
+
+<div *ngFor='let fix_service of fixedPayment'>
+  <div class="card">
+    <div class="card-body">
+      <h3>{{fix_service.name | uppercase}}</h3>
+      <hr>
+      <p>Fixed service</p>
+    </div>
   </div>
 </div>
+<div *ngFor='let var_service of varPayment'>
+  <div class="card">
+    <div class="card-body">
+      <h3>{{var_service.name | uppercase}}</h3>
+      <hr>
+      <p>Variable service</p>
+      <hr>
+      <p id='metric'>Your metric:</p>
+      <input type="number" class="form-control" placeholder="{{var_service.tariff}}" disabled>        
+    </div>
+  </div>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Create new service</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div id='new_name_service'>
+      <input type="text" class="form-control" placeholder='Input your name service' [(ngModel)]='new_name_service'>
+    </div>
+    <div id='check'>
+      <input id="checkBox" type="checkbox" [(ngModel)]='isFixed'>
+      <label for="checkBox">My service is fixed</label>
+    </div>
+    <div *ngIf="!isFixed">
+      <input type="number" class="form-control" placeholder='Metric' [(ngModel)]='metric'>
+    </div>
+    <div id='btn_alert'>
+      <button type="button" class="btn btn-success" (click)='addNewPayment(new_name_service, metric, isFixed)'>Create</button>
+    </div>
+  </div>
+</ng-template>

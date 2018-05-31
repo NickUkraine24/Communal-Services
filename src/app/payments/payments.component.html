@@ -1,5 +1,26 @@
-<div class="card-body">
-  <h3></h3>
-  <h3></h3>
-  <h3></h3>
+<select [(ngModel)]='selectedYear' (change)='getTemplateYear()'>
+  <option value="">All</option>
+  <option *ngFor="let pay of payment | setFilter">{{pay.year}}</option>
+</select>
+<select [(ngModel)]='selectedMonth' [disabled]="!selectedYear">
+  <option value="">All</option>
+  <option *ngFor='let pay of payment | yearFilter:{year:selectedYear}' value="{{pay?.month}}">{{pay?.month | month}}</option>
+</select>
+
+<div class="card">
+  <div class="card-body">
+    <div *ngFor='let pay of payment | yearFilter:{year:selectedYear,month:selectedMonth}'>
+      <h1>{{pay.year}} {{pay?.month | month}}</h1>
+      <div *ngFor='let fixedService of pay.fixedService'>
+          <h3>{{fixedService.name | uppercase}}: {{fixedService.sum}} UAH</h3>
+      </div>
+      <hr>
+      <div *ngFor='let varService of pay.varService'>
+          <h3>{{varService.name | uppercase}}: {{varService.sum}} UAH</h3>
+          <h4>Your metric: {{varService.current}}</h4>
+          <hr>
+      </div>
+      <hr>
+    </div>
+  </div>
 </div>
